@@ -2,8 +2,8 @@
     <thead>
         <th>Nombre</th>
         <th>Vivienda</th>
-        <th>Vive Con</th>
-        <th>Gastos Estudio</th>
+        <th>Vive</th>
+        <th>Gastoestudio</th>
         <th>Procedencia</th>
         <th>Nota Ingreso</th>
         <th colspan="3">Action</th>
@@ -13,8 +13,8 @@
         <tr>
             <td>{!! $encuesta->nombre !!}</td>
             <td>{!! $encuesta->vivienda !!}</td>
-            <td>{!! $encuesta->vive_con !!}</td>
-            <td>{!! $encuesta->gastos_estudio !!}</td>
+            <td>{!! $encuesta->vive !!}</td>
+            <td>{!! $encuesta->gastoEstudio !!}</td>
             <td>{!! $encuesta->procedencia !!}</td>
             <td>{!! $encuesta->nota_ingreso !!}</td>
             <td>

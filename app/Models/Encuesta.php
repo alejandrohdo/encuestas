@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * @SWG\Definition(
  *      definition="Encuesta",
- *      required={"nombre", "vivienda", "vive_con", "nota_ingreso"},
+ *      required={"nombre", "vivienda", "vive", "gastoEstudio"},
  *      @SWG\Property(
  *          property="id",
  *          description="id",
@@ -26,13 +26,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          type="string"
  *      ),
  *      @SWG\Property(
- *          property="vive_con",
- *          description="vive_con",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="gastos_estudio",
- *          description="gastos_estudio",
+ *          property="vive",
+ *          description="vive",
  *          type="string"
  *      ),
  *      @SWG\Property(
@@ -73,8 +68,8 @@ class Encuesta extends Model
     public $fillable = [
         'nombre',
         'vivienda',
-        'vive_con',
-        'gastos_estudio',
+        'vive',
+        'gastoEstudio',
         'procedencia',
         'nota_ingreso'
     ];
@@ -87,8 +82,7 @@ class Encuesta extends Model
     protected $casts = [
         'nombre' => 'string',
         'vivienda' => 'string',
-        'vive_con' => 'string',
-        'gastos_estudio' => 'string',
+        'vive' => 'string',
         'procedencia' => 'string',
         'nota_ingreso' => 'integer'
     ];
@@ -101,7 +95,11 @@ class Encuesta extends Model
     public static $rules = [
         'nombre' => 'required',
         'vivienda' => 'required',
-        'vive_con' => 'required',
-        'nota_ingreso' => 'required'
+        'vive' => 'required',
+        'gastoEstudio' => 'required'
     ];
+    public function estudiante()
+    {
+        return $this->belongsTo('\App\Models\Estudiante');
+    }
 }

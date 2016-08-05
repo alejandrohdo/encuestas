@@ -5,15 +5,37 @@
 </div>
 
 <!-- Vivienda Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-12">
     {!! Form::label('vivienda', 'Vivienda:') !!}
-    {!! Form::select('vivienda', ['Alquilado' => 'Alquilado', 'Propio' => 'Propio', 'Alojado' => 'Alojado'], null, ['class' => 'form-control']) !!}
+    <label class="radio-inline">
+        {!! Form::radio('vivienda', "Alquilado", null) !!} Alquilado
+    </label>
+    <label class="radio-inline">
+        {!! Form::radio('vivienda', "Propio", null) !!} Propio
+    </label>
+    <label class="radio-inline">
+        {!! Form::radio('vivienda', "Alojado", null) !!} Alojado
+    </label>
 </div>
 
-<!-- Vive Con Field -->
+<!-- Vive Field -->
+<div class="form-group col-sm-12">
+    {!! Form::label('vive', 'Vive:') !!}
+    <label class="radio-inline">
+        {!! Form::radio('vive', "Padres", null) !!} Padres
+    </label>
+    <label class="radio-inline">
+        {!! Form::radio('vive', "Familiar", null) !!} Familiar
+    </label>
+    <label class="radio-inline">
+        {!! Form::radio('vive', "Solo", null) !!} Solo
+    </label>
+</div>
+
+<!-- Gastoestudio Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('vive_con', 'Vive Con:') !!}
-    {!! Form::select('vive_con', ['Padres' => 'Padres', 'Un familiar' => 'Un familiar', 'Vivo solo' => 'Vivo solo', 'otro' => 'otro'], null, ['class' => 'form-control']) !!}
+    {!! Form::label('gastoEstudio', 'Gastoestudio:') !!}
+    {!! Form::number('gastoEstudio', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Procedencia Field -->

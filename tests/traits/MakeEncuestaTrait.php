@@ -44,8 +44,8 @@ trait MakeEncuestaTrait
         return array_merge([
             'nombre' => $fake->word,
             'vivienda' => $fake->word,
-            'vive_con' => $fake->word,
-            'gastos_estudio' => $fake->word,
+            'vive' => $fake->word,
+            'gastoEstudio' => $fake->word,
             'procedencia' => $fake->word,
             'nota_ingreso' => $fake->randomDigitNotNull,
             'created_at' => $fake->word,

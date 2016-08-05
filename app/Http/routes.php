@@ -56,3 +56,13 @@ Route::resource('estudiantes', 'EstudianteController');
 Route::resource('encuestas', 'EncuestaController');
 
 Route::resource('carreraProfesioanls', 'CarreraProfesioanlController');
+
+Route::resource('carreras', 'CarreraController');
+
+Route::resource('sedes', 'SedeController');
+
+Route::resource('carreras', 'CarreraController');
+
+Route::resource('estudiantes', 'EstudianteController');
+
+Route::resource('encuestas', 'EncuestaController');

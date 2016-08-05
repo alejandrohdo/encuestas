@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('apellidos')->required();
             $table->enum('tipo_usuario', array('1'=>'Administrador', '2'=>'Invitado'), '2');
+            $table->enum('estatus', array('1'=>'Activo', '2'=>'Inactivo'), '1');
             $table->rememberToken();
             $table->timestamps();
         });

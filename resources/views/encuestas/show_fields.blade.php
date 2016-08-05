@@ -16,16 +16,16 @@
     <p>{!! $encuesta->vivienda !!}</p>
 </div>
 
-<!-- Vive Con Field -->
+<!-- Vive Field -->
 <div class="form-group">
-    {!! Form::label('vive_con', 'Vive Con:') !!}
-    <p>{!! $encuesta->vive_con !!}</p>
+    {!! Form::label('vive', 'Vive:') !!}
+    <p>{!! $encuesta->vive !!}</p>
 </div>
 
-<!-- Gastos Estudio Field -->
+<!-- Gastoestudio Field -->
 <div class="form-group">
-    {!! Form::label('gastos_estudio', 'Gastos Estudio:') !!}
-    <p>{!! $encuesta->gastos_estudio !!}</p>
+    {!! Form::label('gastoEstudio', 'Gastoestudio:') !!}
+    <p>{!! $encuesta->gastoEstudio !!}</p>
 </div>
 
 <!-- Procedencia Field -->

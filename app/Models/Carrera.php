@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @SWG\Definition(
- *      definition="Estudiante",
- *      required={"codigo", "nombre", "apellidos", "sexo"},
+ *      definition="Carrera",
+ *      required={"nombre"},
  *      @SWG\Property(
  *          property="id",
  *          description="id",
@@ -16,18 +16,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          format="int32"
  *      ),
  *      @SWG\Property(
- *          property="codigo",
- *          description="codigo",
- *          type="string"
- *      ),
- *      @SWG\Property(
  *          property="nombre",
  *          description="nombre",
- *          type="string"
- *      ),
- *      @SWG\Property(
- *          property="apellidos",
- *          description="apellidos",
  *          type="string"
  *      ),
  *      @SWG\Property(
@@ -44,21 +34,18 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *      )
  * )
  */
-class Estudiante extends Model
+class Carrera extends Model
 {
     use SoftDeletes;
 
-    public $table = 'estudiantes';
+    public $table = 'carreras';
     
 
     protected $dates = ['deleted_at'];
 
 
     public $fillable = [
-        'codigo',
-        'nombre',
-        'apellidos',
-        'sexo'
+        'nombre'
     ];
 
     /**
@@ -67,9 +54,7 @@ class Estudiante extends Model
      * @var array
      */
     protected $casts = [
-        'codigo' => 'string',
-        'nombre' => 'string',
-        'apellidos' => 'string'
+        'nombre' => 'string'
     ];
 
     /**
@@ -78,21 +63,15 @@ class Estudiante extends Model
      * @var array
      */
     public static $rules = [
-        'codigo' => 'required',
-        'nombre' => 'required',
-        'apellidos' => 'required',
-        'sexo' => 'required'
+        'nombre' => 'required'
     ];
-/*    public function user()
+    public function estudiante()
     {
-        return $this->belongsTo('\App\User');
-    }*/
-    public function encuestas()
-    {
-        return $this->hasMany('\App\Models\Encuesta');
+        return $this->hasMany('\App\Models\Estudiante');
     }
-    public function carrera()
+
+    public function sede()
     {
-        return $this->belongsTo('\App\Models\Carrera');
+        return $this->belongsTo('\App\Models\Sede');
     }
 }

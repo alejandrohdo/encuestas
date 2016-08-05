@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * @SWG\Definition(
  *      definition="Sede",
- *      required={"nombre", "direccion"},
+ *      required={"nombre"},
  *      @SWG\Property(
  *          property="id",
  *          description="id",
@@ -77,7 +77,11 @@ class Sede extends Model
      * @var array
      */
     public static $rules = [
-        'nombre' => 'required',
-        'direccion' => 'required'
+        'nombre' => 'required'
     ];
+    public function carreras()
+    {
+        return $this->hasMany('\App\Models\Carrera');
+    }
+
 }

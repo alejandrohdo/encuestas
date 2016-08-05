@@ -69,6 +69,7 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
             'apellidos'=>$data['apellidos'],
             'tipo_usuario'=>'Invitado',
+            'estatus'=>'Activo',
              
         ]);
     }

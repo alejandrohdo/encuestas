@@ -22,3 +22,13 @@ Route::resource('estudiantes', 'EstudianteAPIController');
 Route::resource('encuestas', 'EncuestaAPIController');
 
 Route::resource('carreraProfesioanls', 'CarreraProfesioanlAPIController');
+
+Route::resource('carreras', 'CarreraAPIController');
+
+Route::resource('sedes', 'SedeAPIController');
+
+Route::resource('carreras', 'CarreraAPIController');
+
+Route::resource('estudiantes', 'EstudianteAPIController');
+
+Route::resource('encuestas', 'EncuestaAPIController');

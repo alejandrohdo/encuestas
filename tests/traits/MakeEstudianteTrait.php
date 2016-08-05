@@ -45,7 +45,7 @@ trait MakeEstudianteTrait
             'codigo' => $fake->word,
             'nombre' => $fake->word,
             'apellidos' => $fake->word,
-            'sexo' => $fake->randomDigitNotNull,
+            'sexo' => $fake->word,
             'created_at' => $fake->word,
             'updated_at' => $fake->word
         ], $estudianteFields);
