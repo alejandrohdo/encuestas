@@ -30,13 +30,13 @@
 
 <!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
+    {!! Form::label('created_at', 'Fecha registro:') !!}
     <p>{!! $estudiante->created_at !!}</p>
 </div>
 
 <!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
+    {!! Form::label('updated_at', 'Actualizacion:') !!}
     <p>{!! $estudiante->updated_at !!}</p>
 </div>
 

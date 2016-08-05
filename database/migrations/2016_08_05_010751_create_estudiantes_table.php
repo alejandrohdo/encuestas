@@ -15,8 +15,8 @@ class CreateestudiantesTable extends Migration
     {
         Schema::create('estudiantes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('carrera_id')->unsigned();
-/*            $table->integer('user_id')->unsigned();*/
+            /*$table->integer('carrera_id')->unsigned();*/
+/*          $table->integer('user_id')->unsigned();*/
             $table->string('codigo', 15);
             $table->string('nombre', 60);
             $table->string('apellidos', 80);
@@ -29,10 +29,10 @@ class CreateestudiantesTable extends Migration
                 ->onUpdate('CASCADE')
                 ->onDelete('NO ACTION');*/
                 
-            $table->foreign('carrera_id')
-                ->references('id')->on('carreras')
+/*            $table->foreign('carrera_id')
+                ->references('id')->on('encuestas')
                 ->onUpdate('CASCADE')
-                ->onDelete('NO ACTION');
+                ->onDelete('NO ACTION');*/
         });
     }
 

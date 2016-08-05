@@ -89,7 +89,7 @@ class Estudiante extends Model
     }*/
     public function encuestas()
     {
-        return $this->hasMany('\App\Models\Encuesta');
+        return $this->hasOne('\App\Models\Encuesta');
     }
     public function carrera()
     {

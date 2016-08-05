@@ -21,6 +21,9 @@ class User extends Authenticatable
      *
      * @var array
      */
+    public static $rules = [
+        'name' => 'required'
+    ];
     protected $hidden = [
         'password', 'remember_token',
     ];

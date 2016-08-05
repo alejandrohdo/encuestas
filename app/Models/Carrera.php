@@ -65,9 +65,9 @@ class Carrera extends Model
     public static $rules = [
         'nombre' => 'required'
     ];
-    public function estudiante()
+    public function encuestas()
     {
-        return $this->hasMany('\App\Models\Estudiante');
+        return $this->hasMany('\App\Models\Encuesta');
     }
 
     public function sede()

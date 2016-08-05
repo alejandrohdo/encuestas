@@ -16,6 +16,7 @@ class CreateencuestasTable extends Migration
         Schema::create('encuestas', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('estudiante_id')->unsigned();
+            $table->integer('carrera_id')->unsigned();
             $table->string('nombre', 60);
             $table->string('vivienda');
             $table->string('vive', 60);
@@ -27,6 +28,11 @@ class CreateencuestasTable extends Migration
 
             $table->foreign('estudiante_id')
                 ->references('id')->on('estudiantes')
+                ->onUpdate('CASCADE')
+                ->onDelete('NO ACTION');
+
+            $table->foreign('carrera_id')
+                ->references('id')->on('carreras')
                 ->onUpdate('CASCADE')
                 ->onDelete('NO ACTION');
         });

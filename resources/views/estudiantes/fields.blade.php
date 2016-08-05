@@ -16,10 +16,14 @@
     {!! Form::text('apellidos', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Sexo Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-12">
     {!! Form::label('sexo', 'Sexo:') !!}
-    {!! Form::select('sexo', ['Hombre' => 'Hombre', 'Mujer' => 'Mujer'], null, ['class' => 'form-control']) !!}
+    <label class="radio-inline">
+        {!! Form::radio('sexo', "Hombre", null) !!} Hombre
+    </label>
+    <label class="radio-inline">
+        {!! Form::radio('sexo', "Mujer", null) !!} Mujer
+    </label>
 </div>
 
 <!-- Submit Field -->
