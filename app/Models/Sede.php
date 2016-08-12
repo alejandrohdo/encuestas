@@ -83,5 +83,4 @@ class Sede extends Model
     {
         return $this->hasMany('\App\Models\Carrera');
     }
-
 }

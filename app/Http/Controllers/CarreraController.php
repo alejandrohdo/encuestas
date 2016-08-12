@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use App\Models\Sede;
 
 class CarreraController extends InfyOmBaseController
 {
@@ -32,7 +33,8 @@ class CarreraController extends InfyOmBaseController
     {
         $this->carreraRepository->pushCriteria(new RequestCriteria($request));
         $carreras = $this->carreraRepository->all();
-
+        #para poder listar todos los sedes, para poder crear una CARRERA PROFESIONAL
+        $sedes = Sede::lists('nombre','ubicacion','id');
         return view('carreras.index')
             ->with('carreras', $carreras);
     }

@@ -58,3 +58,5 @@ Route::resource('encuestas', 'EncuestaController');
 Route::resource('carreras', 'CarreraController');
 
 Route::resource('users', 'UserController');
+
+Route::resource('reportes', 'ReporteController');

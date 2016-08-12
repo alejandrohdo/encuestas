@@ -140,7 +140,6 @@ class UserController extends InfyOmBaseController
 
         return redirect(route('users.index'));
     }
-
     /**
      * Remove the specified Usuario from storage.
      *

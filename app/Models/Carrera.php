@@ -45,7 +45,7 @@ class Carrera extends Model
 
 
     public $fillable = [
-        'nombre'
+        'nombre', 'sede_id'
     ];
 
     /**
