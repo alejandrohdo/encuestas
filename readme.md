@@ -1,9 +1,11 @@
 SISTEMA DE ENCUESTAS BASICA, HECHO EN LARAVEL 5.2.
-Instalación
+
+INSTALACION
 
 Después de descargar el proyecto entramos a este.
 
 $ cd nombreRepositorio
+
 Ejecutamos el siguiente comando.
 
 $ composer install
@@ -17,7 +19,7 @@ Generamos una key para nuestra app.
 Ejecutamos las migraciones.
 
  $ php artisan migrate
- 
+
 Listo ya podemos ejecutar el proyecto.
 
-$ php artisan serve
+$ php artisan serv
