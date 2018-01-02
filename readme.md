@@ -1,6 +1,6 @@
 SISTEMA DE ENCUESTAS BASICA, HECHO EN LARAVEL 5.2.
 
-INSTALACION
+INSTALACIÓN
 
 Después de descargar el proyecto entramos a este.
 
